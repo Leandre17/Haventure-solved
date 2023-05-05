@@ -1,0 +1,56 @@
+3 - Dans les étoiles
+
+Vous avez pris vos jambes à votre cou et échappé aux griffes des ours, mais vous vous retrouvez complètement perdu. C'est là que vous vous rappelez des enseignements de l'horoscope de la semaine dernière : “si les constellations du cancer et de l'autruche s'alignent, alors vous retrouverez votre chemin dans la vie.” C'est profond ! Vous localisez d'instinct celle du cancer, mais reste à trouver celle de l'autruche. C'est une constellation de trois étoiles, dont vous connaissez la disposition. Plus qu'à la chercher dans le magnifique ciel étoilé de la nuit tombante ...
+On donne les coordonnées des étoiles du ciel dans un plan, et dans un autre plan, celles de la constellation. (Les étoiles de la constellation ne sont donc a priori pas aux mêmes coordonnées dans le ciel).
+Votre tâche est de déterminer si la constellation se trouve bien dans le ciel, et si oui, donner la position des étoiles. On ne prendra pas en compte les rotations possibles de la constellation.
+
+Données
+Entrées
+Lignes 1 à 3 : Des entiers xi et yi séparés par un espace, les coordonnées des étoiles formant la constellation, 0 <= xi, yi < 25.
+Ligne 4 : un entier N, le nombre d'étoiles dans le ciel, 3 <= N < 20.
+Les N lignes suivantes : des entiers xj et yj séparés par un espace, les coordonnées des étoiles dans le ciel, 0 <= xj, yj < 100
+
+Sortie
+Si la constellation est présente : 3 lignes avec les coordonnées des étoiles composant la constellation dans le ciel.
+Sinon : 1 ligne contenant le texte NOT FOUND
+
+Exemples
+Exemple 1
+Entrée :
+0 0
+2 2
+2 0
+4
+1 1
+3 3
+5 2
+3 1
+
+Sortie :
+1 1
+3 3
+3 1
+
+Exemple 2
+Entrée :
+5 20
+20 12
+22 16
+12
+35 0
+39 47
+41 97
+46 72
+51 22
+58 48
+73 92
+79 8
+79 61
+94 53
+96 57
+97 20
+
+Sortie :
+79 61
+94 53
+96 57

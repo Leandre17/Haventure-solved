@@ -1,0 +1,35 @@
+1 - L'aventure commence
+
+Vous revenez vite à la réalité quand vous réalisez tout ce qu'il faut pour survivre dans la nature. Déjà, il est impensable de laisser votre ordinateur portable, un algorithme peut toujours vous tirer d'affaire dans une situation compliquée. Mais il va falloir faire des choix, car votre vieux sac de cours, travaillé par les manuels de français, ne peut soutenir qu'un certain poids sous peine de craquer. Vous rassemblez les cinq objets les plus importants à vos yeux, et vous vous demandez s'ils vont bien pouvoir tous tenir dans votre sac.
+Données
+Entrée
+
+Ligne 1 : Un entier S, le poids que peut soutenir le sac, avec 1 <= S < 100.
+Ligne 2 à 6 : Un entier P sur chaque ligne, le poids d'un objet, avec 1 <= P < 100.
+
+Sortie
+YES si tous les objets tiennent dans le sac, NO sinon.
+Si le poids total des objets est égal au poids que peut soutenir le sac, alors il tiendra bon.
+Exemples
+
+Exemple 1
+Entrée :
+10
+2
+3
+1
+2
+1
+Sortie :
+YES
+
+Exemple 2
+Entrée :
+15
+4
+8
+3
+5
+7
+Sortie :
+NO

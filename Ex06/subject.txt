@@ -1,0 +1,31 @@
+6 - Échantillons d'eau salée
+
+Après toutes ces aventures, vous trouvez un endroit sympa pour vous installer sur une péninsule jusqu'à ce que la legacy codebase vous rappelle.
+Vous construisez une petite-maison en coupant des arbres, mais vous vous rendez rapidement compte que vous aurez besoin d'eau pour survivre ici à long terme. En bon scientifique, vous décidez d'analyser l'eau de chaque côté de la péninsule chaque jour pour savoir de quel côté aller boire.
+Mais la péninsule est très large, ça vaut le coup de calculer le meilleur itinéraire pour aller échantilloner l'eau de chaque côté en un seul voyage. Avec les coordonnées des sommets du triangle formant la péninsule ainsi que de la cabane, calculez le chemin le plus court pour aller de la cabane à une rive, puis à l'autre rive, pour retourner à la cabane.
+Le point B est la pointe de la péninsule, il faut donc que le chemin aille aux côtés AB et BC du triangle.
+
+Données
+Entrée
+Ligne 1 : un entier T, le nombre de test-cases, 1 <= T <= 103.
+Sur les 4*T prochaines lignes (0 <= i < T) :
+    Ligne 4xi : 2 réels xA et yA séparés par un espace donnant la position du point A.
+    Ligne 4xi+1 : 2 réels xB et xB, la position du point B, la pointe de la péninsule.
+    Ligne 4xi+2 : 2 réels xC et yC, la position du point C.
+    Ligne 4xi+3 : 2 réels xM et yM, la position du point M, la cabane.
+Note : la cabane est forcément dans le triangle ABC. Tous les points sont donnés avec 2 chiffres après la virgule et sont compris entre 0 et 100.
+
+Sortie
+La longueur du chemin le plus court avec une précision de 6 décimales (10-6) sur une ligne pour chaque test-case.
+
+Exemples
+Entrée
+1
+4.38 5.81
+3.04 2.27
+7.54 3.03
+4.6 3.74
+
+Sortie
+3.700326
+

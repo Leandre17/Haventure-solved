@@ -1,0 +1,38 @@
+2 - Attaque d'ours
+
+Vous voilà parti !! Loin de la ville, loin de vos potes, loin de votre patron. Le premier jour se passe à merveille, vous retrouvez des sensations que même le Métavers ne saurait procurer. Changer d'air vous a même permis de trouver le bug qui vous tourmentait, technique à noter pour le prochain concours d'algo.
+Alors que vous êtes perdus dans vos songes et dans la forêt, vous arrivez devant une falaise. En vous retournant, vous découvrez avec stupeur un ours affamés qui suit vos traces ! Pas de panique, tout est sous contrôle. La forêt est trop dense pour s'y engouffrer, vous ne pouvez-vous déplacer facilement que sur le chemin. Vous faites rapidement l'inventaire des cachettes à votre disposition, et estimez la position de l'ours. Sachant que vous courrez aussi vite que lui, est ce que vous pouvez atteindre une cachette à temps ? Sinon, il va falloir trouver une autre solution...
+
+Données
+Entrée
+Ligne 1 : Une chaine de caractères représentant le chemin composé des symboles suivants : X, votre position ; B, les ours ; C, les cachettes ; ., le chemin. Il n'y aura toujours qu'un seul X, au début de la chaîne, et un seul B. La taille de chaine en entrée est comprise entre 1 et 100.
+
+Sortie
+YES si vous pouvez atteindre une cachette à temps, NO sinon.
+
+Remarques :
+    si vous arrivez à une cachette en même temps que l'ours, c'est trop tard.
+    il se peut qu'il n'y ait pas de cachette (auquel cas la question elle est vite répondue)
+
+Exemples
+Exemple 1
+Entrée :
+X..C....B..
+
+Sortie :
+YES
+
+Exemple 2
+Entrée :
+X...C..B
+
+Sortie :
+NO
+
+Exemple 3
+Entrée :
+X....B.C.....C.C
+
+Sortie :
+NO
+

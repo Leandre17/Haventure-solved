@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+
+
+from queue import PriorityQueue
+from sys import argv
+
+lines = []
+for line in argv[1::]:
+    lines.append(line)
+
+n = int(lines[0])
+map = [[0 if c == "." else 1 if c == "X" else -1 for c in line] for line in lines[1:]]
+
+# Trouver la clée
+for i in range(n):
+    for j in range(n):
+        if map[i][j] == -1:
+            key = (i, j)
+            map[i][j] = 0
+
+
+# Fonction pour calculer la liste des cases voisines
+def neighbours(pos):
+    adjs = [(-1, 0), (0, -1), (1, 0), (0, 1)]
+    neis = []
+    for adj in adjs:
+        nei = (pos[0] + adj[0], pos[1] + adj[1])
+        if 0 <= nei[0] < n and 0 <= nei[1] < n:
+            neis.append(nei)
+    return neis
+
+
+# Dijkstra, algorithme classique de parcours de graphe
+def dijkstra(begin, end):
+    seen = set()
+
+    queue = PriorityQueue()
+    queue.put((0, begin))
+
+    while not queue.empty():
+        cost, pos = queue.get()
+        if pos in seen:  # Déjà exploré
+            continue
+        if pos == end:  # Fin
+            return cost
+        seen.add(pos)
+        for nei in neighbours(pos):  # Ajout des voisins à la queue
+            if nei in seen:
+                continue
+            additional_cost = map[nei[0]][nei[1]]
+            queue.put((cost + additional_cost, nei))
+
+
+print(dijkstra((0, 0), key) + dijkstra(key, (n - 1, n - 1)))

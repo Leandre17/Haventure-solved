@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+from sys import argv
+
+lines = []
+for line in argv[1::]:
+    lines.append(line)
+
+stars = [tuple(map(int, lines[i].split())) for i in range(3)]
+nb_stars = int(lines[3])
+sky = {tuple(map(int, lines[4 + j].split())) for j in range(nb_stars)}
+
+# Calculate the offsets
+V1 = (stars[1][0] - stars[0][0], stars[1][1] - stars[0][1])
+V2 = (stars[2][0] - stars[0][0], stars[2][1] - stars[0][1])
+
+# For each star, check if the two others are in the right place to form the constellation
+for star in sky:
+    star_1 = (star[0] + V1[0], star[1] + V1[1])
+    star_2 = (star[0] + V2[0], star[1] + V2[1])
+    if star_1 in sky and star_2 in sky:
+        print(*star)
+        print(*star_1)
+        print(*star_2)
+        break
+
+else:
+    print("NOT FOUND")

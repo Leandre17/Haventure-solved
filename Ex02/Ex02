@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+from sys import argv
+
+line = argv[1]
+
+if "C" not in line:  # pas de cachette
+    print("NO")
+
+else:
+    first_C = line.index("C")
+    first_B = line.index("B")
+    if first_B - first_C > first_C:  # on compare les distances
+        print("YES")
+    else:
+        print("NO")

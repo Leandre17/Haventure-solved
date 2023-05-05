@@ -1,0 +1,27 @@
+4 - Champ de ronces
+
+Après avoir suivi les étoiles jusqu'au bout de la nuit, changé trois fois de direction puis s'être effondré de fatigue, vous êtes forcé de l'admettre, vous êtes toujours perdu. Mais au réveil, vous découvrez devant vous une preuve de la civilisation humaine, une petite tour de pierre ! Elle est entourée d'un jardin plus ou moins bien entretenu, qui se trouve plutôt être un énorme champ de ronces. Le propriétaire était malin, il a laissé la clé de la tour au milieu des ronces, il faudra passer la chercher en chemin.
+Les ronces, ça pique, donc vous voulez passer à travers le moins possible. Vous planifiez votre chemin avec une carte que vous avez établie en grimpant sur un arbre (on espère que vous dessinez bien). La carte est un quadrillage carré où les ronces sont marquées par des croix et la clé par un cercle. Vous commencez en haut à gauche et votre but est d'arriver en bas à droite (ces deux cases sont toujours sans ronce) en passant par la clé. Vous devez déterminer le nombre minimal de ronces qu'il faut traverser pour y arriver.
+
+Données
+Entrées
+Ligne 1 : Un entier N, la largeur et la hauteur du quadrillage, 10 <= N < 50.
+Ligne 2 à N+1 : Une chaine de caractères composée de X, de ., et d'un O. Les X sont des ronces, les . de l'herbe sans ronce, et le O la clé.
+
+Sortie
+Le nombre minimal de ronces qu'il faut traverser pour aller d'un bout à l'autre du quadrillage, en passant par la clé.
+
+Exemple
+
+Pour l'entrée :
+6
+..X...
+XXXXX.
+.XXX.X
+XXXO..
+.XXX.X
+..X...
+
+Le chemin qui minimise le nombre de ronces commence par aller à droite. On remarque qu'il existe ensuite plusieurs chemins équivalents dans le coin en haut à droite, qui nécessitent tous de traverser une deuxième ronce. Il faut ensuite passer par la clé puis faire demi-tour et passer entre deux ronces pour arriver à l'objectif en bas à droite. On a traversé un total de 2 ronces, d'où la sortie :
+2
+
